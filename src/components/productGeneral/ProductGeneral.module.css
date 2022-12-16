@@ -1,0 +1,168 @@
+.productGeneral{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap:2.7%;
+}
+.reverseProductGeneral{
+    flex-direction: row-reverse;
+}
+.productGeneral> div{
+   
+   width: 48.65%;
+   display: flex;
+   position: relative;
+   border-radius: var(--radius);
+   overflow: hidden;
+}
+
+.imgWrapper img{
+    width: 100%;
+}
+.ImgTablet, .ImgMobile{
+    display: none;
+}
+.presentation{
+    position: absolute;
+    width:445px;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align:left;
+    justify-content: space-between;
+  }
+.presentation .title{
+    margin:0 0 16px 0;
+    letter-spacing: 9.3px;
+}
+
+.presentation h2{
+    width: 445px;
+    height: 88px;
+    letter-spacing: 1.43px;
+    margin:0 0 32px 0;
+}
+.overlay{
+    height: 100px;
+    width: 100%;
+    opacity: 0.5;
+    margin:0 0 40px 0;
+}
+  /* Media Query for Large screens */
+  @media (min-width: 1281px) {
+    .presentationRight{
+        right:0;
+      }
+    .presentationLeft{
+        left: 0;
+      }
+}
+
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px){
+    .presentation{
+        width:400px ;
+    }
+    .presentationRight{
+        right:0;
+      }
+    .presentationLeft{
+        left: 0;
+      }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .headphones{
+        gap: 120px;
+    }
+    .productGeneral{
+        flex-direction: column;
+        gap: 52px;
+    }
+    .productGeneral  >div{
+        width: 100%;
+        height: 352px;
+    }
+    .ImgDesc{
+        display: none;
+    }
+    .ImgTablet{
+        display: block;
+    }
+    .presentation{
+        width:100% ;
+        text-align: center;
+        align-items: center;
+        width: 572px;
+        top: 0;
+        right:50%;
+        transform: translateX(50%);
+    }
+    .presentation h2{
+        width: 260px;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 1px;
+    }
+    .overlay{
+        width:100% ;
+        height: 75px;
+        margin:0 0 24px 0;
+    }
+
+}
+@media (max-width: 768px){
+    .headphones{
+        gap: 120px;
+    }
+    .productGeneral{
+        flex-direction: column;
+        gap: 52px;
+        transform: translateY(-74px);
+    }
+    .productGeneral  >div:first-child{
+        width: 100%;
+        height: 352px;
+    }
+    .productGeneral  >div:last-child{
+        width: 100%;
+        height: 340px;
+    }
+    .ImgDesc{
+        display: none;
+    }
+    .ImgMobile{
+        display: block;
+    }
+    .presentation{
+        width:100% ;
+        text-align: center;
+        align-items: center;
+        top: 0;
+        right:50%;
+        transform: translateX(50%);
+    }
+    .presentation .title{
+        margin:0 0 24px 0;
+    }
+    
+    .presentation h2{
+        margin:0 0 24px 0;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 1px;
+        width: 327px;
+        height: 76px;
+    }
+    .overlay{
+        width:100% ;
+        height: 100%;
+        margin:0 0 24px 0;
+    }
+
+}

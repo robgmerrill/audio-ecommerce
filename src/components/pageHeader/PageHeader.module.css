@@ -1,0 +1,28 @@
+.headphonesHeader{
+    height: 336px;
+    background-color: var(--dark-color);
+    position: relative;
+}
+.headphonesHeader h2{
+    margin: 0;
+    color: var(--white-color);
+    position: absolute;
+    top:195px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+    .headphonesHeader{
+        height: 192px;
+    }
+    .headphonesHeader h2{
+        margin: 0;
+        color: var(--white-color);
+        position: absolute;
+        top:122px;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 2px;
+    }
+
+}

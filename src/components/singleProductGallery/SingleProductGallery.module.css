@@ -1,0 +1,60 @@
+.singleProductGallery{
+    width: 100%;
+    display: flex;
+    gap: 32px;
+}
+.imgWrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.imgWrapper1, .imgWrapper2, .imgWrapper3{
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.imgWrapper3{
+    width: 57%;
+}
+.desktopImg, .tabletImg, .mobileImg{
+    width: 100%;
+    height: 100%;
+}
+.tabletImg, .mobileImg{
+    display: none;
+}
+  /* Media Query for low resolution  Tablets, Ipads */
+  @media(max-width: 767px) {
+    .singleProductGallery{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .imgWrapper{
+        gap: 20px;
+    }
+     .imgWrapper3{
+        width: 100%;
+    }
+    .mobileImg{
+        display: block;
+    }
+    .desktopImg, .tabletImg{
+        display: none;
+    }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    .singleProductGallery{
+        gap: 18px;
+    }
+    .imgWrapper{
+        gap: 20px;
+    }
+    .tabletImg{
+        display: block;
+    }
+    .desktopImg, .mobileImg{
+        display: none;
+    }
+   
+}

@@ -1,0 +1,83 @@
+.landingEarphone{
+    margin-top: 48px;
+    margin-bottom: 211px;
+    width: 100%;
+}
+.contenu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.contenu >div{
+    height: 320px;
+    width: 48.64%;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.earphoneImg{
+position: relative;
+}
+.earphoneImgDesc, .earphoneImgTablet, .earphoneImgMobile{
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infoCart{
+    background-color: var(--white-color-1);
+    position: relative;
+}
+.info{
+    position: absolute;
+    top:100px;
+    left: 17.77%;
+    width: 247px;
+    height: 118px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.info h4{
+    margin: 0;
+}
+.info button{
+    background-color: var(--white-color-1);
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .landingEarphone{
+        margin-bottom: 120px;
+    }
+    .contenu{
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .contenu >div{
+        width: 100%;
+        height: 200px;
+    }
+    .earphoneImgMobile{
+        display: block;
+        width: 100%;
+        height: 200px;
+    }
+    .info{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }  
+}
+@media (min-width: 767px){
+    .earphoneImgDesc{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }  
+}
+@media (min-width: 767px) and (max-width:1024px){
+    .landingEarphone{
+        margin-bottom: 95px;
+    }
+}

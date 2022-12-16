@@ -1,0 +1,80 @@
+.menuLinks{
+    width: 100%;
+    position: absolute;
+    top:90px;
+    left: 0;
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(221px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 32px;
+    gap:10px;
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color-9);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    animation-name: show;
+    animation-duration: 1s;
+    z-index: 100;
+  }
+.menuLink{
+   background-color: var(--white-color-1);
+   height: 165px;
+   margin-top: 52px;
+   position: relative;
+   border-radius: var(--radius);
+}
+.menuLink .imgWrapper{
+  position: absolute;
+  height: 104px;
+   left:50%;
+   transform: translate(-50%, -50%);
+   top:0;
+  }
+.menuLink img.headphoneImg{
+   height: 130%;
+}
+.menuLink img.speakerImg{
+   height: 145%;
+}
+.menuLink img.earphoneImg{
+   height: 160%;
+}
+.menuLink h6{
+position: absolute;
+  top: 83px;
+  left: 50%;
+  transform:translateX(-50%);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 30.49px;
+  letter-spacing: 1.07px;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  margin: 0;
+}
+.menuLink button{
+position: absolute;
+  top: 125px;
+  left: 50%;
+  transform:translateX(-50%);
+  background-color:var(--white-color-1);
+}
+@keyframes show {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@media (max-width: 480px) {
+  .menuLinks{
+      display: grid;
+      padding-top:32px;         
+      padding-bottom:32px; 
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .menuLinks{
+      display: grid;
+      padding-top:56px;         
+      padding-bottom:67px;         
+
+  }
+}

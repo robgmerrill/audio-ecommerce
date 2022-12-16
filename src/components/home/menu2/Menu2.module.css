@@ -1,0 +1,172 @@
+.menuLinks{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+}
+.menuLink{
+  height: 284px;
+}
+.menuLink .info{
+    width: 100%;
+  background-color: var(--white-color-1);
+  border-radius: var(--radius);
+  position: relative;
+}
+.menuLink .info .imgWrapper{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menuLink:first-child .info .imgWrapper{
+    height: 160px;
+    width: 123px;
+    bottom: 123px;
+}
+.menuLink:nth-child(2) .info .imgWrapper{
+   height: 146px;
+   width: 122px;
+   bottom: 131px;
+}
+.menuLink:last-child .info .imgWrapper{
+   height: 125px;
+   width: 126px;
+   bottom: 142px;
+}
+.menuLink img.headphoneImg{
+    height: 132%;
+    transform: translateX(-51px);
+ }
+ .menuLink img.speakerImg{
+    height: 146%;
+    transform: translateX(-55px);
+ }
+ .menuLink img.earphoneImg{
+    height: 156%;
+    transform: translateX(-49px);
+ }
+ .menuLink h6{
+    position: absolute;
+      bottom:63px;
+      left: 50%;
+      transform:translateX(-50%);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 1.2857px;
+      text-transform: uppercase;
+      color: var(--dark-color);
+      margin: 0;
+    }
+    .menuLink a{
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform:translateX(-50%);
+      background-color:var(--white-color-1);
+    }
+
+@media (max-width: 767px) {
+  .menuLinks{
+    transform:translateY(-59px);
+    grid-template-columns: auto;
+    gap: 16px;
+  }
+  .menuLink{
+    height: 217px;
+  }
+  .info{
+    height: 165px;
+    transform: translateY(50px);
+  }
+  .menuLink:first-child .info .imgWrapper{
+    height: 104px;
+    width: 80px;
+    bottom: 114px;
+}
+.menuLink:nth-child(2) .info .imgWrapper{
+   height: 101px;
+   width: 84px;
+   bottom: 114px;
+}
+.menuLink:last-child .info .imgWrapper{
+   height: 104px;
+   width: 103px;
+   bottom: 114px;
+}
+.menuLink img.headphoneImg{
+  transform: translateX(-32px);
+}
+.menuLink img.speakerImg{
+  transform: translateX(-37px);
+}
+.menuLink img.earphoneImg{
+  transform: translateX(-40px);
+}
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .menuLinks{
+    gap: 10px;
+  }
+  .menuLink{
+    height: 217px;
+  }
+  .info{
+    height: 165px;
+    transform: translateY(50px);
+  }
+  .menuLink:first-child .info .imgWrapper{
+    height: 104px;
+    width: 80px;
+    bottom: 114px;
+}
+.menuLink:nth-child(2) .info .imgWrapper{
+   height: 101px;
+   width: 84px;
+   bottom: 114px;
+}
+.menuLink:last-child .info .imgWrapper{
+   height: 104px;
+   width: 103px;
+   bottom: 114px;
+}
+.menuLink img.headphoneImg{
+  transform: translateX(-32px);
+}
+.menuLink img.speakerImg{
+  transform: translateX(-37px);
+}
+.menuLink img.earphoneImg{
+  transform: translateX(-40px);
+}
+.menuLink h6{
+    bottom: 57px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 1.07143px;
+  }
+  .menuLink a{
+    bottom: 22px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1281px) {
+  .menuLinks{
+   gap: 20px;
+  }
+  .info{
+    height: 204px;
+      transform: translateY(80px);
+  }
+  
+}
+   /* Media Query for Large screens */
+   @media (min-width: 1281px) {
+    .menuLinks{
+      gap: 30px;
+    }
+    .info{
+      height: 204px;
+        transform: translateY(80px);
+    }
+}
+ 

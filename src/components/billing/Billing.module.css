@@ -1,0 +1,210 @@
+.billing{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    min-height: 100vh;
+}
+.backdrop{
+   position: absolute;
+   left: 0;
+   height: 100vh;
+   width: 100%;
+   background-color: var(--dark-color);
+   opacity: 0.4;
+   z-index: 500;
+}
+.billingModal{
+    position: absolute;
+    left:0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 540px;
+    min-height: 581px;
+    max-height: 713px;
+    border: 1px solid var(--white-color-9);
+    border-radius: var(--radius);
+    background-color:var(--white-color);
+    z-index: 600;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;   
+    animation: slide-down 300ms ease-out forwards; 
+}
+@keyframes slide-down {
+   from {
+     opacity: 0;
+     top:0;
+   }
+   to {
+      opacity: 1;
+      top: 156px;
+   }
+ }
+.billingModalHeader{
+   width: 100;
+   display: flex;
+   flex-direction: column;
+   align-items:flex-start;
+   justify-content: center;
+   margin-bottom: 33px;
+}
+.svgWrapper{
+    height: 64px;
+    margin-bottom: 33px;
+}
+.billingModalHeader svg{
+   width: 100%;
+}
+.billingModalHeader h3{
+   width: 285px;
+   margin: 0 0 25px 0;
+ }
+.billingModalHeader p{
+    opacity: .5;
+    margin: 0;
+ }
+ .billingModalBody{
+    width: 100%;
+    border-radius: var(--radius);
+    display: flex;
+    min-height: 142px;
+    max-height: 270px;
+    margin-bottom: 46px;
+    
+ }
+ .info{
+    background-color:var(--white-color-1) ;
+    flex: 1;
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+ }
+ .products{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap:16px
+ }
+ .product{
+    width: 100%;  
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+ }
+ .product p{
+    margin: 0;
+ }
+ .imgWrapper{
+    height: 50px;
+    width: 50px;
+    margin-right: 16px;
+ }
+ .imgWrapper img{
+    width: 100%;
+ }
+ .productInfo{
+    display: flex;
+    flex-direction: column;
+ }
+ .productInfo p{
+    font-weight: 700;
+    text-transform: uppercase;
+ }
+ .productInfo p:last-child{
+    font-size: 14px;
+    opacity: .5;
+ }
+ li>p{
+    font-weight: 700;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+ }
+ .productsMessage{
+   margin-top: 12px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top:1px solid rgb(0,0,0,.2);
+ }
+ .productsMessage button{
+   position: absolute;
+   height: 30px;
+   top:50%;
+   left:50%;
+   width: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.214286px;
+    opacity: .5;
+    margin: 0;
+    transform: translateX(-50%);
+    border: none;
+    cursor: pointer;
+
+ }
+
+ .total{
+    width:198px ;
+    background-color: var(--dark-color);
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items:flex-start;
+    justify-content: center;
+ }
+ .total p, .total h6{
+   color: var(--white-color);
+   margin: 0;
+ }
+ .total p{
+   opacity: .5;
+ }
+
+ .billingModalFooter{
+    width: 100%;
+ }
+ .billingModalFooter button{
+    width: 100%;
+ }
+
+   /* Media Query for Mobile Devices */
+   @media (max-width: 767px) {
+      .billingModal{
+         width: 87.6%;
+         max-width: 540px;  
+         padding: 32px;
+      }
+      .billingModalHeader{
+         margin-bottom: 24px;
+      }
+      .svgWrapper{
+         margin-bottom: 24px;
+     }
+      .billingModalHeader h3{
+         font-size: 24px;
+         line-height: 28px;   
+         letter-spacing: 0.857143px;
+         margin: 0 0 2px 0;
+       }
+       .billingModalBody{
+         flex-direction: column; 
+         margin-bottom: 20px;
+       }
+      .total{
+         width: 100%;
+         padding: 24px;
+       }
+     
+  }
+    

@@ -1,0 +1,10 @@
+.headphones{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transform: translateY(-97px);
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    position: relative;
+}

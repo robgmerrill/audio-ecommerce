@@ -1,0 +1,231 @@
+.checkout{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transform: translateY(-97px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.checkoutHeader{
+    width: 100%;
+    height: 97px;
+    background-color: var(--dark-color);
+}
+.returnPage{
+    position: absolute;
+    top: 176px;
+    left: 0;
+}
+.returnPage button{
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: capitalize;
+    line-height: 25px;
+    color: var(--dark-color);
+    background-color: transparent;
+    border: none;
+    opacity: 50%;
+    cursor: pointer;
+}
+.checkoutContainer{
+    position: relative;
+    top: 142px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap:28px
+
+}
+.checkoutForm{
+    width: 65.76%;
+    height: 100%;
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 48px;
+}
+.checkoutForm h3{
+    margin: 6px 0 0 0;
+}
+.checkoutForm p{
+    margin: 48px 0 16px 0;
+    width: 121px;
+    letter-spacing: 0.93px;
+    
+}
+.billing, .shipping, .payment{
+    width: 100%;
+    display: grid;
+    grid-template-columns:auto auto;
+    column-gap: 16px;
+    row-gap: 24px;
+
+}
+.billing>div, .shipping>div, .payment>div{
+    width: 100%;
+}
+
+.shipping>div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.payment>div:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.errorMessage{
+    margin: 0 !important;
+}
+.cashSection{
+   width: 100%; 
+   display: flex;
+   align-items:center;
+   gap: 32px;
+   margin-top: 30px;
+}
+.cashSvgWrapper{
+ width: 48px;
+}
+ .cashInfo{
+    flex: 1;
+}
+.cashInfo p{
+    width: 100%;
+    opacity: .5;
+    margin: 0;
+} 
+
+.checkoutSummary{
+    flex: 1;
+    width: 100%;
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.checkoutSummary h6{
+    margin: 0;
+}
+.propducts{
+    width: 100%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.propducts li{
+    width: 100%;
+    
+}
+.propducts li, .propducts li .product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.propducts li .product{
+   gap: 16px;
+}
+.propducts li .imgWrapper{
+    width: 64px;
+    height: 64px;
+    background-color: #ccc;
+}
+.propducts li .imgWrapper img{
+    width: 64px;
+
+}
+.propducts li .product .info h5{
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+ }
+.propducts li .product .info h6{
+    margin: 0;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: .5;
+ }
+.quantity {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: .5;
+ }
+ .actions{
+    margin:0;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+.total{
+   margin:0;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+}
+.total p{
+   margin:0;
+   color: var(--dark-color);
+   opacity: .5;
+   text-transform: uppercase;
+}
+.total h6{
+   margin:0;
+  line-height: 25px;
+  letter-spacing: 0.7px;
+}
+.checkoutSummary button{
+   width: 100%;
+}
+
+  /* Media Query for Mobile Devices */
+  @media (max-width: 767px) {
+    .checkout{
+        transform: translateY(-90px);
+    }
+    .checkoutHeader{
+        height: 90px;
+    }
+    .checkoutContainer{
+        flex-direction: column;
+    }
+    .checkoutForm{
+        width: 100%;
+        padding: 24px;
+    }
+    .billing, .shipping, .payment{
+        width: 100%;
+        grid-template-columns:auto;
+    
+    }
+    .billing>div, .shipping>div{
+        width: 100%;
+    }
+    .shipping>div:first-child {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .payment>div:first-child {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+ /* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 768px) and (max-width: 1024px){
+    .checkoutContainer{
+     flex-direction: column;
+     
+    }
+    .checkoutForm{
+        width: 100%;
+        padding: 28px;
+    }
+}

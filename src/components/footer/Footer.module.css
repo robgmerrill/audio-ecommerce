@@ -1,0 +1,172 @@
+.footer{
+    margin-top: 189px;
+    width: 100%;
+    background-color: var(--dark-color-second);
+    height: 365px;
+    position: relative;
+}
+.contenu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 48px;
+}
+.contenu::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 4px;
+    width: 101px;
+    background-color: var(--main-color);
+    z-index: 100;
+}
+.header{
+    margin-top: 75px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 25px;
+}
+.logo button{
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+.links{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 33px;
+}
+.links li{
+    height: 25px;
+}
+.links li a{
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+.header + p{
+    margin: 0;
+    width:calc(50% + 5px) ;
+    color: var(--white-color);
+    opacity: 0.5;
+    letter-spacing: 0;
+}
+.social{
+   position: absolute;
+   bottom: 129px;
+   right: 0;
+   height: 24px;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 16px;
+}
+.social a:hover svg path, .social a:active svg path{
+  fill: var(--main-color);
+  transition: var(--transition);
+}
+
+.rights{
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+}
+.rights p{
+    margin: 0;
+    color: var(--white-color);
+    opacity: 0.5;
+    letter-spacing: 0;
+}
+@media (max-width: 767px) {
+    .footer{
+        margin-top: 120px;
+        padding-top: 52px;
+        padding-bottom: 38px;
+        height: 654px;
+    }
+    .contenu::before{
+        top:-52px;
+        left: 50%;       
+        transform: translateX(-50%); 
+    }
+    .header{
+        margin-top: 0px;
+        height: 221px;
+        flex-direction: column;
+        text-align: center;
+        gap: 48px;
+    }
+    .links{
+        margin: 0;
+        height: 148px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .header + p{
+        margin: 0;
+        width:100% ;
+        text-align: center;
+    }
+    .social{
+        bottom: 0px;
+        right: 50%;
+        transform: translateX(50%);
+     }
+     .rights{
+        bottom: 72px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+     }
+}
+   /* Media Query for Tablets Ipads portrait mode */
+   @media (min-width: 768px) and (max-width: 1024px){
+    .footer{
+        margin-top: 96px;
+        padding-top: 60px;
+        padding-bottom: 46px;
+        height: 400px;
+    }
+    .contenu::before{
+        top:-60px;        
+    }
+    .header{
+        margin-top: 0px;
+        height: 82px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links{
+        margin: 0;
+    }
+    .header + p{
+        margin: 0;
+        width:100% ;
+        transform: translateY(-16px);
+         
+    }
+    .social{
+      bottom: 0px;
+     }
+     .rights{
+       bottom: 0;
+    }
+    
+}
+

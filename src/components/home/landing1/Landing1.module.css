@@ -1,0 +1,200 @@
+.landing1{
+    margin-top: 167px;
+    width: 100%;
+}
+.contenu{
+    height: 560px;
+    width: 100%;
+    background-color:var(--main-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+.speakerImage{
+    position: absolute;
+    bottom: 0;
+    left:139px;
+    height: 448px;
+    width: 372px;
+    z-index: 1;
+}
+.speakerImage img{
+    height: 454px;
+    transform: translateY(3px);
+}
+.info{
+    position: absolute;
+    bottom:124px;
+    right: 95px;
+    width: 349px;
+    height: 303px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.info h1{
+    margin: 0;
+    padding: 0;
+    color: var(--white-color);
+}
+.info p{
+    width: 100%;
+    color: var(--white-color);
+    opacity: 0.75;
+    margin: 0;
+    transform: translateY(-3px);
+}
+.info button{
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border:2px solid var(--dark-color); 
+}
+.info button:hover, .info button:active{
+    color: var(--white-color) !important;
+    background-color: #4C4C4C !important;
+    border-color:  #4C4C4C !important; 
+}
+.info button:hover{
+    color: var(--dark-color);
+  background-color: var(--white-color);
+  border:2px solid var(--dark-color);
+}
+.oval1, .oval2, .oval3{
+   position: absolute;
+   mix-blend-mode: normal;
+   border: 1px solid var(--white-color);
+   border-radius: 50%; 
+   opacity: 0.2;
+   z-index: 0;
+}
+.oval1{
+   width: 944px;
+   height: 944px;
+   bottom: -349px;
+   left:-149px ;
+}
+.oval2{
+   width: 542px;
+   height: 542px;
+   bottom: -146px;
+   left:51px ;  
+}
+.oval3{
+   width: 472px;
+   height: 472px;
+   bottom: -114px;
+   left:85px ;
+}
+ /* Media Query for Mobile Devices */
+ @media (max-width: 480px) {
+    .landing1{
+        height: 600px;
+        margin-top: 120px;
+    }
+    .landing1 .contenu{
+        height: 600px;
+    }
+    .speakerImage{
+        position: absolute;
+        top:55px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 207px;
+        width: 172.25px;
+    }
+    .speakerImage img{
+        position: absolute;
+       height: 96%;
+       transform: translate(3%, 2%);
+    }
+    .info{
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 306px;
+        width: 349px;
+        align-items: center;
+        text-align: center;
+    }
+    .info h1{
+       font-size: 36px;
+       line-height: 40px;
+       letter-spacing: 1.28px;
+       width: 240px;
+       height: 80px;
+    }
+    .info p{
+        transform: translateY(-27px);
+        width: 240px;
+    }
+    .info button{
+        transform: translateY(-55px);
+    }
+    .oval1, .oval2, .oval3{
+        left: 50%;
+    }
+    .oval1{
+        width: 558px;
+        height: 558px;
+        transform: translate(-50%, -512px);
+     }
+     .oval2{
+        width: 320px;
+        height: 320px;
+        transform: translate(-50%, -428px); 
+     }
+     .oval3{
+        width: 279px;
+        height: 279px;
+        transform: translate(-50%, -416px);
+     }
+}
+
+   /* Media Query for low resolution  Tablets, Ipads */
+   @media (min-width: 481px) and (max-width: 767px) {
+    .landing1{
+        height: 720px;
+        margin-top: 96px;
+    }
+    .landing1 .contenu{
+        height: 720px;
+    }
+    .speakerImage{
+        position: absolute;
+        top:60px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 237px;
+        width: 197.21px;
+    }
+    .speakerImage img{
+        position: absolute;
+       height: 100%;
+    }
+    .info{
+        bottom: 64px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 303px;
+        width: 349px;
+        align-items: center;
+        text-align: center;
+    }
+    .oval1, .oval2, .oval3{
+        left: 50%;
+        transform: translate(-50%, -413px);
+    }
+}
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px){
+    .info{
+       right: 30px;
+    }
+    .speakerImage{
+       left: 90px;
+    } .oval1, .oval2, .oval3{
+        transform: translateX(-49px);
+    }
+}
